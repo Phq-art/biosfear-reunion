@@ -13,7 +13,7 @@ public class SpecialWeapon extends PlayerItem {
 	
 	private int speed; // 0 - Very Slow; 1 - Slow; 2 - Normal; 3 - Fast; 4 - Very Fast
 
-	private int minDamge;
+	private int minDamage;
 
 	private int maxDamage;
 
@@ -54,7 +54,7 @@ public class SpecialWeapon extends PlayerItem {
 	}
 
 	public int getMinDamage() {
-		return minDamge;
+		return minDamage;
 	}
 
 	/**
@@ -227,7 +227,7 @@ public class SpecialWeapon extends PlayerItem {
 	}
 
 	public void setMinDamage(int minDamge) {
-		this.minDamge = minDamge;
+		this.minDamage = minDamge;
 	}
 
 	public void setPosition(int position) {

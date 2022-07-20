@@ -38,7 +38,7 @@ public class Capture extends Thread{
 
 
 		BufferedReader serverbr = new BufferedReader(new FileReader("server.txt"));
-		String serverbuffer, serverresult ="";
+		String serverbuffer, serverresult = "";
 		while ((serverbuffer = serverbr.readLine()) != null) {
 			serverresult = serverresult + serverbuffer;
 		}

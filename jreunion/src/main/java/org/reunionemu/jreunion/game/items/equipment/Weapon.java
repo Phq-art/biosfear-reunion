@@ -17,7 +17,7 @@ public abstract class Weapon extends PlayerItem {
 
 	// 4 - Very Slow
 
-	private float minDamge;
+	private float minDamage;
 	
 	private float maxDamage;
 
@@ -65,15 +65,15 @@ public abstract class Weapon extends PlayerItem {
 		int gradeLevel = item.getGradeLevel();
 		
 		if(gradeLevel == 0)
-			return minDamge;
+			return minDamage;
 		
 		if(getLevel() < 181){
 			//return (int)(minDamge * ((((.12f * gradeLevel) + ((gradeLevel * gradeLevel-1) + 2)))+1));
-			return  minDamge * ((gradeLevel==1?0.12f:0)+(gradeLevel==2?0.26f:0)+
+			return  minDamage * ((gradeLevel==1?0.12f:0)+(gradeLevel==2?0.26f:0)+
 					(gradeLevel==3?0.44f:0)+(gradeLevel==4?0.68f:0)+
 					(gradeLevel==5?1f:0)+1);
 		} else {
-			return minDamge * ((gradeLevel * 0.1f)+1);
+			return minDamage * ((gradeLevel * 0.1f)+1);
 		}
 	}
 	
@@ -219,7 +219,7 @@ public abstract class Weapon extends PlayerItem {
 	}
 
 	public void setMinDamage(float minDamge) {
-		this.minDamge = minDamge;
+		this.minDamage = minDamge;
 	}
 	
 	public void setPosition(int position) {

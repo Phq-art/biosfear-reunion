@@ -30,17 +30,17 @@ public class PlayerController {
 		Map map = server.getWorld().getMap(mapId);
 		if(map!=null && map instanceof LocalMap){
 			
-			List<Object> playersReponse = new LinkedList<Object>();
+			List<Object> playersResponse = new LinkedList<Object>();
 			
 			List<Player> players = ((LocalMap) map).getPlayerList();
 			
 			for(final Player player: players){
 				
-				playersReponse.add(buildResponse(player));				
+				playersResponse.add(buildResponse(player));
 				
 			}
 			
-			return playersReponse;
+			return playersResponse;
 		}
 		throw new RuntimeException("");
 	}
@@ -50,7 +50,7 @@ public class PlayerController {
  
 		Collection<Map> maps = server.getWorld().getMaps();
 		Iterator<Map> iter = maps.iterator();		
-		List<Object> playersReponse = new LinkedList<Object>();
+		List<Object> playersResponse = new LinkedList<Object>();
 		while(iter.hasNext()){
 			Map map = iter.next();
 
@@ -59,26 +59,26 @@ public class PlayerController {
 
 				for(final Player player: players){
 					
-					playersReponse.add(buildResponse(player));				
+					playersResponse.add(buildResponse(player));
 					
 				}
 			}
 			
 		}
-		return playersReponse;
+		return playersResponse;
 	}
 	
 	@SuppressWarnings("unused")
 	public Object buildResponse(final Player player){
 		return new Object(){
 			
-			public String name = player.getName();
-			public int level = player.getLevel();
-			public Object position = new Object(){
-				public int x = player.getPosition().getX();
-				public int y = player.getPosition().getY();
-				public int z = player.getPosition().getZ();
-				public int map = player.getPosition().getMap().getId();
+			public final String name = player.getName();
+			public final int level = player.getLevel();
+			public final Object position = new Object(){
+				public final int x = player.getPosition().getX();
+				public final int y = player.getPosition().getY();
+				public final int z = player.getPosition().getZ();
+				public final int map = player.getPosition().getMap().getId();
 			};
 		};
 	}
