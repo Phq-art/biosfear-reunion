@@ -8,6 +8,7 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.nio.file.Files;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Vector;
@@ -16,11 +17,10 @@ import org.slf4j.LoggerFactory;
 
 /**
  * @author Aidamina
- * @license http://reunion.googlecode.com/svn/trunk/license.txt
  */
 public class Parser implements Iterable<ParsedItem> {
 
-	private List<ParsedItem> itemList = new Vector<ParsedItem>();
+	private final List<ParsedItem> itemList = new Vector<ParsedItem>();
 	
 	private String source;	
 
@@ -51,33 +51,28 @@ public class Parser implements Iterable<ParsedItem> {
 	}
 
 	public void clear() {
-
 		Iterator<ParsedItem> iter = getItemListIterator();
 		while (iter.hasNext()) {
 			ParsedItem item = iter.next();
 			item.clear();
 		}
 		itemList.clear();
-
 	}
 
 	public String dump() {
-		String dumpString = new String("");
+		StringBuilder dumpString = new StringBuilder(new String(""));
 		Iterator<ParsedItem> itemIter = getItemListIterator();
 		while (itemIter.hasNext()) {
 			ParsedItem parsedItem = itemIter.next();
-			dumpString += "\n[" + parsedItem.getName() + "]\n";
+			dumpString.append("\n[").append(parsedItem.getName()).append("]\n");
 			Iterator<ParsedItemMember> memberIter = parsedItem
 					.getMemberListIterator();
 			while (memberIter.hasNext()) {
 				ParsedItemMember parsedItemMember = memberIter.next();
-				dumpString += parsedItemMember.getName() + " = "
-						+ parsedItemMember.getValue() + "\n";
+				dumpString.append(parsedItemMember.getName()).append(" = ").append(parsedItemMember.getValue()).append("\n");
 			}
-
 		}
-		return dumpString;
-
+		return dumpString.toString();
 	}
 
 	public ParsedItem find(String membername, String membervalue) {
@@ -92,7 +87,6 @@ public class Parser implements Iterable<ParsedItem> {
 					.equals(membervalue.toLowerCase())) {
 				return parsedItem;
 			}
-
 		}
 		return null;
 	}
@@ -127,10 +121,10 @@ public class Parser implements Iterable<ParsedItem> {
 		
 			BufferedReader input = new BufferedReader(new InputStreamReader(inputStream));
 			String line = null;
-			int linenr = 0;
+			int lineNr = 0;
 
 			while ((line = input.readLine()) != null) {
-				linenr++;
+				lineNr++;
 				line = line.trim();
 				if (line.startsWith("#") || line.length() == 0) {
 					continue;
@@ -145,21 +139,20 @@ public class Parser implements Iterable<ParsedItem> {
 								hobject.length() - 1);
 						hobjectname = hobjectname.trim();
 						if (getItem(hobjectname) != null) {
-							LoggerFactory.getLogger(Parser.class).info(parseError(linenr,
+							LoggerFactory.getLogger(Parser.class).info(parseError(lineNr,
 									"Object with name \"" + hobjectname
 											+ "\" already exits", line));
 							continue;
 						}
 						parsedItem = new ParsedItem(hobjectname);
 						addMember(parsedItem);
-
 					}
 				}
 
 				if (line.contains("=")) {
 					if (parsedItem == null) {
 
-						LoggerFactory.getLogger(Parser.class).info(parseError(linenr,
+						LoggerFactory.getLogger(Parser.class).info(parseError(lineNr,
 								"Member needs an object", line));
 						continue;
 					}
@@ -170,16 +163,13 @@ public class Parser implements Iterable<ParsedItem> {
 					parsedItem.addMember(parsedItemMember);
 				}
 				if (object.length < 1 || object.length > 2) {
-					LoggerFactory.getLogger(Parser.class).info(parseError(linenr,
+					LoggerFactory.getLogger(Parser.class).info(parseError(lineNr,
 							"Invalid member syntax", line));
-					continue;
 				}
-
 			}
 			input.close();
 
 		} catch (Exception e) {
-
 			LoggerFactory.getLogger(this.getClass()).warn("Exception",e);
 		}
 		
@@ -192,18 +182,12 @@ public class Parser implements Iterable<ParsedItem> {
 			LoggerFactory.getLogger(Parser.class).info("Parsing error: '" + file.getAbsolutePath()
 					+ "' does not exist");
 			throw new FileNotFoundException(file.getAbsolutePath());
-			
 		}
-		Parse(new FileInputStream(file));		
-
+		Parse(Files.newInputStream(file.toPath()));
 	}
 
-	private String parseError(int linenr, String errorMessage,
-			String line) {
-		String parseErrorMessage = new String();
-		parseErrorMessage = "Parsing error line " + linenr + " in " + getSource()
-				+ " (" + errorMessage + "): \"" + line + "\"";
-		return parseErrorMessage;
+	private String parseError(int lineNr, String errorMessage, String line) {
+		return "Parsing error line " + lineNr + " in " + getSource() + " (" + errorMessage + "): \"" + line + "\"";
 	}
 
 	@Override
