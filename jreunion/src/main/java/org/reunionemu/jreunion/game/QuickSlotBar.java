@@ -9,10 +9,7 @@ import org.slf4j.LoggerFactory;
 import org.reunionemu.jreunion.server.DatabaseUtils;
 import org.reunionemu.jreunion.server.PacketFactory.Type;
 
-/**
- * @author Aidamina
- * @license http://reunion.googlecode.com/svn/trunk/license.txt
- */
+
 public class QuickSlotBar {
 	private List<QuickSlotItem> itemList = new Vector<QuickSlotItem>();
 

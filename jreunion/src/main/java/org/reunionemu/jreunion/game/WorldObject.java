@@ -8,10 +8,8 @@ import org.reunionemu.jreunion.server.PacketFactory.Type;
 import org.reunionemu.jreunion.server.Sendable;
 import org.reunionemu.jreunion.server.Session;
 import org.reunionemu.jreunion.server.SessionList;
-/**
- * @author Aidamina
- * @license http://reunion.googlecode.com/svn/trunk/license.txt
- */
+
+
 public abstract class WorldObject extends EventDispatcher implements Entity {
 	
 	private int id = -1;

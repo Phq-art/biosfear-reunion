@@ -5,10 +5,8 @@ import java.nio.channels.SocketChannel;
 import org.reunionemu.jreunion.events.Event;
 import org.reunionemu.jreunion.events.Filter;
 import org.reunionemu.jreunion.events.InvalidEventException;
-/**
- * @author Aidamina
- * @license http://reunion.googlecode.com/svn/trunk/license.txt
- */
+
+
 public class NetworkEvent extends Event {
 	
 	SocketChannel socketChannel;

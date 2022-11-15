@@ -15,10 +15,7 @@ import org.reunionemu.jreunion.server.Client;
 import org.reunionemu.jreunion.server.Reference;
 import org.reunionemu.jreunion.server.Server;
 
-/**
- * @author Aidamina
- * @license http://reunion.googlecode.com/svn/trunk/license.txt
- */
+
 public class Mob extends NpcType {
 
 	private int dmg;

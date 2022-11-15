@@ -8,10 +8,6 @@ import org.reunionemu.jreunion.game.Player;
 import org.reunionemu.jreunion.game.Usable;
 import org.reunionemu.jreunion.server.PacketFactory.Type;
 
-/**
- * @author Aidamina
- * @license http://reunion.googlecode.com/svn/trunk/license.txt
- */
 public class PersonalShopCertificate extends Etc implements Usable{
 	
 	public PersonalShopCertificate(int id) {

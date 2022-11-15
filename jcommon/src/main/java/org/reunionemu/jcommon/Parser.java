@@ -15,9 +15,6 @@ import java.util.Vector;
 
 import org.slf4j.LoggerFactory;
 
-/**
- * @author Aidamina
- */
 public class Parser implements Iterable<ParsedItem> {
 
 	private final List<ParsedItem> itemList = new Vector<ParsedItem>();

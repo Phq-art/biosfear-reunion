@@ -8,10 +8,7 @@ import org.reunionemu.jreunion.server.Reference;
 import org.reunionemu.jreunion.server.Server;
 import org.reunionemu.jreunion.server.World;
 
-/**
- * @author Aidamina
- * @license http://reunion.googlecode.com/svn/trunk/license.txt
- */
+
 public abstract class Weapon extends PlayerItem {
 	private int speed; // 0 - Very Fast; 1 - Fast; 2 - Normal; 3 - Slow;
 

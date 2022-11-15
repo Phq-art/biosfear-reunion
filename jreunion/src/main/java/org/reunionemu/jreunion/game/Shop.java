@@ -8,10 +8,7 @@ import org.reunionemu.jreunion.server.SessionList;
 import org.reunionemu.jreunion.server.PacketFactory.Type;
 import org.slf4j.LoggerFactory;
 
-/**
- * @author Aidamina
- * @license http://reunion.googlecode.com/svn/trunk/license.txt
- */
+
 public class Shop {
 
 	private Player Owner;

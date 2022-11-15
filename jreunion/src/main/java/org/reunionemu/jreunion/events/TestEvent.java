@@ -3,10 +3,7 @@ package org.reunionemu.jreunion.events;
 import org.reunionemu.jreunion.events.client.ClientEvent;
 import org.reunionemu.jreunion.server.Client;
 
-/**
- * @author Aidamina
- * @license http://reunion.googlecode.com/svn/trunk/license.txt
- */
+
 public class TestEvent extends Event {
 
 	public TestEvent() {

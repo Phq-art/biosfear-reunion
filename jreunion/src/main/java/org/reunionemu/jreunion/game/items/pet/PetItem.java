@@ -4,10 +4,6 @@ import org.reunionemu.jcommon.ParsedItem;
 import org.reunionemu.jreunion.game.ItemType;
 import org.reunionemu.jreunion.server.Reference;
 
-/**
- * @author Aidamina
- * @license http://reunion.googlecode.com/svn/trunk/license.txt
- */
 public class PetItem extends ItemType {
 	private int type;
 

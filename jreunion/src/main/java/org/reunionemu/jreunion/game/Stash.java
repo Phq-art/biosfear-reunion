@@ -6,10 +6,6 @@ import java.util.Vector;
 
 import org.reunionemu.jreunion.server.Server;
 
-/**
- * @author Aidamina
- * @license http://reunion.googlecode.com/svn/trunk/license.txt
- */
 public class Stash {
 
 	private List<StashItem> itemList = new Vector<StashItem>();

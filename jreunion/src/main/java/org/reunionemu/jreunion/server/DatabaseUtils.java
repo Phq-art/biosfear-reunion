@@ -32,10 +32,6 @@ import org.reunionemu.jreunion.game.items.pet.PetEquipment.PetSlot;
 import org.slf4j.LoggerFactory;
 
 
-/**
- * @author Aidamina
- * @license http://reunion.googlecode.com/svn/trunk/license.txt
- */
 public class DatabaseUtils {
 	
 	private DatabaseUtils() {

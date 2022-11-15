@@ -1,10 +1,6 @@
 package org.reunionemu.jreunion.game;
 
-/**
- * @author Aidamina
- * @license http://reunion.googlecode.com/svn/trunk/license.txt
- * Item wrapper for Inventory
- */
+
 public class InventoryItem {
 	
 	private Item<?> item = null;

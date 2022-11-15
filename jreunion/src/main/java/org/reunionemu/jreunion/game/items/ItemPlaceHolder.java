@@ -2,11 +2,6 @@ package org.reunionemu.jreunion.game.items;
 
 import org.reunionemu.jreunion.game.PlayerItem;
 
-
-/**
- * @author Aidamina
- * @license http://reunion.googlecode.com/svn/trunk/license.txt
- */
 public class ItemPlaceHolder extends PlayerItem{
 	public ItemPlaceHolder(int id) {
 		super(id);

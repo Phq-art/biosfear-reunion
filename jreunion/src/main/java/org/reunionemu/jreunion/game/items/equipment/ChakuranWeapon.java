@@ -12,10 +12,6 @@ import org.reunionemu.jreunion.server.DatabaseUtils;
 import org.reunionemu.jreunion.server.Reference;
 import org.reunionemu.jreunion.server.PacketFactory.Type;
 
-/**
- * @author Aidamina
- * @license http://reunion.googlecode.com/svn/trunk/license.txt
- */
 public class ChakuranWeapon extends SpecialWeapon implements Usable{
 	
 	private float memoryDmg;

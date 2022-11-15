@@ -5,10 +5,6 @@ import org.reunionemu.jreunion.game.Item;
 import org.reunionemu.jreunion.game.PlayerItem;
 import org.reunionemu.jreunion.server.Reference;
 
-/**
- * @author Aidamina
- * @license http://reunion.googlecode.com/svn/trunk/license.txt
- */
 public class Armor extends PlayerItem {
 
 	private int race; // -1 - Common; 0 - Bulkan; 1 - Kailipton; 2 - Aidia;
@@ -104,8 +100,8 @@ public class Armor extends PlayerItem {
 		ParsedItem item = Reference.getInstance().getItemReference()
 				.getItemById(id);
 
+		// Item can't be found in reference -> continue to load defaults:
 		if (item == null) {
-			// cant find Item in the reference continue to load defaults:
 			setDef(0);
 			setReqStr(0);
 			setReqInt(0);

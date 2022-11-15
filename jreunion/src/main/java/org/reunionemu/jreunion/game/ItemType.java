@@ -5,10 +5,7 @@ import org.reunionemu.jreunion.server.Reference;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Configurable;
 
-/**
- * @author Aidamina
- * @license http://reunion.googlecode.com/svn/trunk/license.txt
- */
+
 public class ItemType{
 		
 	private int price;

@@ -30,10 +30,6 @@ import org.reunionemu.jreunion.game.StashItem;
 import org.reunionemu.jreunion.game.VendorItem;
 import org.reunionemu.jreunion.game.WorldObject;
 
-/**
- * @author Aidamina
- * @license http://reunion.googlecode.com/svn/trunk/license.txt
- */
 public class PacketFactory {
 
 	public static enum Type{

@@ -16,10 +16,6 @@ import org.reunionemu.jreunion.server.REHandler;
 import org.reunionemu.jreunion.server.Reference;
 import org.reunionemu.jreunion.server.PacketFactory.Type;
 
-/**
- * @author Aidamina
- * @license http://reunion.googlecode.com/svn/trunk/license.txt
- */
 public abstract class Potion extends Etc implements Usable {
 	
 	private static int ticks = 4;

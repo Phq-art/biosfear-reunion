@@ -9,10 +9,6 @@ import org.reunionemu.jreunion.model.quests.RestrictionImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Configurable;
 
-/**
- * @author Aidamina
- * @license http://reunion.googlecode.com/svn/trunk/license.txt
- */
 @Configurable
 @XmlType(name="norepeat")
 public class RepeatRestrictionImpl extends RestrictionImpl implements RepeatRestriction {

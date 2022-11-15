@@ -5,10 +5,7 @@ import java.net.Socket;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.reunionemu.jreunion.game.Position;
-/**
- * @author Aidamina
- * @license http://reunion.googlecode.com/svn/trunk/license.txt
- */
+
 public class Test extends EventDispatcher implements EventListener,Runnable {
 
 	public Test() {

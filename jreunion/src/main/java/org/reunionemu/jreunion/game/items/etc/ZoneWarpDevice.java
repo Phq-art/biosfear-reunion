@@ -11,10 +11,6 @@ import org.reunionemu.jreunion.server.Map;
 import org.reunionemu.jreunion.server.World;
 import org.reunionemu.jreunion.server.PacketFactory.Type;
 
-/**
- * @author Aidamina
- * @license http://reunion.googlecode.com/svn/trunk/license.txt
- */
 public class ZoneWarpDevice extends Etc implements Usable{
 	
 	public ZoneWarpDevice(int id) {

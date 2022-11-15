@@ -4,10 +4,8 @@ import org.reunionemu.jreunion.events.Event;
 import org.reunionemu.jreunion.events.Filter;
 import org.reunionemu.jreunion.events.InvalidEventException;
 import org.reunionemu.jreunion.server.Session;
-/**
- * @author Aidamina
- * @license http://reunion.googlecode.com/svn/trunk/license.txt
- */
+
+
 public class SessionEvent extends Event {
 	
 	Session session;

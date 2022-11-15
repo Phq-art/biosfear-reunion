@@ -5,10 +5,6 @@ import org.reunionemu.jreunion.game.Player;
 import org.reunionemu.jreunion.game.SummonWeapon;
 import org.reunionemu.jreunion.server.Reference;
 
-/**
- * @author Aidamina
- * @license http://reunion.googlecode.com/svn/trunk/license.txt
- */
 public class RingWeapon extends SummonWeapon {
 	public RingWeapon(int id) {
 		super(id);

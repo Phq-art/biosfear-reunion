@@ -9,10 +9,6 @@ import org.reunionemu.jreunion.game.items.etc.Etc;
 import org.reunionemu.jreunion.server.Reference;
 import org.reunionemu.jreunion.server.PacketFactory.Type;
 
-/**
- * @author Aidamina
- * @license http://reunion.googlecode.com/svn/trunk/license.txt
- */
 public abstract class Capsule extends Etc implements Usable {
 	
 	public static int ticks = 4;

@@ -24,10 +24,7 @@ import org.reunionemu.jreunion.server.Server;
 import org.reunionemu.jreunion.server.Session;
 import org.reunionemu.jreunion.server.SessionList;
 
-/**
- * @author Aidamina
- * @license http://reunion.googlecode.com/svn/trunk/license.txt
- */
+
 public class Npc<T extends NpcType> extends LivingObject {
 
 

@@ -41,10 +41,6 @@ import org.reunionemu.jreunion.game.npc.Mob;
 import org.reunionemu.jreunion.server.Area.Field;
 import org.reunionemu.jreunion.server.PacketFactory.Type;
 
-/**
- * @author Aidamina
- * @license http://reunion.googlecode.com/svn/trunk/license.txt
- */
 public class LocalMap extends Map implements Runnable{
 
 	private List<Spawn> npcSpawnList = new Vector<Spawn>();

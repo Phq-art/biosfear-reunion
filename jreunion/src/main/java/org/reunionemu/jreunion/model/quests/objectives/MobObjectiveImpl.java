@@ -7,10 +7,6 @@ import org.reunionemu.jreunion.game.quests.QuestState;
 import org.reunionemu.jreunion.model.jpa.CounterObjectiveStateImpl;
 import org.reunionemu.jreunion.model.quests.ObjectiveImpl;
 
-/**
- * @author Aidamina
- * @license http://reunion.googlecode.com/svn/trunk/license.txt
- */
 @XmlType(name="mob")
 public class MobObjectiveImpl extends ObjectiveImpl implements MobObjective {
 	

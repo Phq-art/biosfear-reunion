@@ -13,10 +13,6 @@ import org.reunionemu.jreunion.server.PacketFactory.Type;
 import org.reunionemu.jreunion.server.Reference;
 
 
-/**
- * @author Aidamina
- * @license http://reunion.googlecode.com/svn/trunk/license.txt
- */
 public class WandWeapon extends SpecialWeapon implements Usable{
 	
 	private float accumulatedDmg;

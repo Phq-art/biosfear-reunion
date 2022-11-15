@@ -10,10 +10,7 @@ import org.reunionemu.jreunion.model.Quest;
 import org.reunionemu.jreunion.server.Tools;
 import org.slf4j.LoggerFactory;
 
-/**
- * @author Aidamina
- * @license http://reunion.googlecode.com/svn/trunk/license.txt
- */
+
 public abstract class LivingObject extends WorldObject {
 
 	private LivingObject target;

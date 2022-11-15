@@ -4,10 +4,7 @@ import org.reunionemu.jcommon.ParsedItem;
 import org.reunionemu.jreunion.server.Reference;
 import org.reunionemu.jreunion.server.Server;
 
-/**
- * @author Aidamina
- * @license http://reunion.googlecode.com/svn/trunk/license.txt
- */
+
 public class NpcType{
 	
 	private int type;

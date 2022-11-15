@@ -1,6 +1,5 @@
 package org.reunionemu.jreunion.game.items.equipment;
 
-import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.reunionemu.jcommon.ParsedItem;
 import org.reunionemu.jreunion.game.Item;
@@ -13,10 +12,6 @@ import org.reunionemu.jreunion.server.Reference;
 import org.reunionemu.jreunion.server.PacketFactory.Type;
 import org.reunionemu.jreunion.server.Server;
 
-/**
- * @author Aidamina
- * @license http://reunion.googlecode.com/svn/trunk/license.txt
- */
 public class SlayerWeapon extends SpecialWeapon implements Usable {
 	
 	private float memoryDmg;

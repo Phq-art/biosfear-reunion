@@ -9,10 +9,6 @@ import org.reunionemu.jreunion.game.Usable;
 import org.reunionemu.jreunion.game.items.equipment.ChakuranWeapon;
 import org.reunionemu.jreunion.server.PacketFactory.Type;
 
-/**
- * @author Aidamina
- * @license http://reunion.googlecode.com/svn/trunk/license.txt
- */
 public class WarpGate extends Etc implements Usable{
 	public WarpGate(int id) {
 		super(id);

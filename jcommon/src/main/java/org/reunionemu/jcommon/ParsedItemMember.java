@@ -1,9 +1,7 @@
 package org.reunionemu.jcommon;
 
-/**
- * @author Aidamina
- * @license http://reunion.googlecode.com/svn/trunk/license.txt
- */
+
+
 public class ParsedItemMember {
 
 	private String name;

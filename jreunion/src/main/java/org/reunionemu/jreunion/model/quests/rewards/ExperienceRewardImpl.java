@@ -5,10 +5,6 @@ import javax.xml.bind.annotation.XmlValue;
 
 import org.reunionemu.jreunion.model.quests.RewardImpl;
 
-/**
- * @author Aidamina
- * @license http://reunion.googlecode.com/svn/trunk/license.txt
- */
 @XmlType(name="experience")
 public class ExperienceRewardImpl extends RewardImpl implements ExperienceReward {
 	

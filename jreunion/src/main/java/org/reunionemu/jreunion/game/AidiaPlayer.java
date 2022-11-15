@@ -7,10 +7,6 @@ import org.reunionemu.jreunion.server.Client;
 import org.reunionemu.jreunion.server.Tools;
 
 
-/**
- * @author Aidamina
- * @license http://reunion.googlecode.com/svn/trunk/license.txt
- */
 public class AidiaPlayer extends Player {
 
 	public AidiaPlayer(Client client) {

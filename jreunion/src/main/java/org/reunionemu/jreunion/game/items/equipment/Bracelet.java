@@ -3,10 +3,6 @@ package org.reunionemu.jreunion.game.items.equipment;
 import org.reunionemu.jreunion.game.items.PersonalOrnament;
 
 
-/**
- * @author Aidamina
- * @license http://reunion.googlecode.com/svn/trunk/license.txt
- */
 public class Bracelet extends PersonalOrnament {
 	public Bracelet(int id) {
 		super(id);

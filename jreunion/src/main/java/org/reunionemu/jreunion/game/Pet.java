@@ -20,10 +20,6 @@ import org.reunionemu.jreunion.server.Tools;
 import org.reunionemu.jreunion.server.Client.State;
 import org.reunionemu.jreunion.server.PacketFactory.Type;
 
-/**
- * @author Aidamina
- * @license http://reunion.googlecode.com/svn/trunk/license.txt
- */
 public class Pet extends LivingObject {
 
 	public int id = -1 ; //id used for database storage

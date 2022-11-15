@@ -13,10 +13,6 @@ import org.reunionemu.jreunion.server.PacketFactory.Type;
 
 
 
-/**
- * @author Aidamina
- * @license http://reunion.googlecode.com/svn/trunk/license.txt
- */
 public class GrindStone extends WhetStone implements Usable{
 	
 	public GrindStone(int id) {

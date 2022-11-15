@@ -12,10 +12,6 @@ import org.reunionemu.jreunion.server.PacketFactory.Type;
 import org.reunionemu.jreunion.server.SkillManager;
 import org.slf4j.LoggerFactory;
 
-/**
- * @author Aidamina
- * @license http://reunion.googlecode.com/svn/trunk/license.txt
- */
 public abstract class Skill {
 	private int id;
 

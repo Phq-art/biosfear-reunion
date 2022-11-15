@@ -3,10 +3,7 @@ package org.reunionemu.jreunion.game;
 import org.reunionemu.jreunion.server.Client;
 import org.reunionemu.jreunion.server.PacketFactory.Type;
 
-/**
- * @author Aidamina
- * @license http://reunion.googlecode.com/svn/trunk/license.txt
- */
+
 public class Quest {
 
 	private int id;

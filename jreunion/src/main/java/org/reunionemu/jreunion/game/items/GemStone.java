@@ -18,10 +18,6 @@ import org.reunionemu.jreunion.server.World;
 import org.reunionemu.jreunion.server.PacketFactory.Type;
 import org.slf4j.LoggerFactory;
 
-/**
- * @author Aidamina
- * @license http://reunion.googlecode.com/svn/trunk/license.txt
- */
 public class GemStone extends ReinforcingAgent implements Usable {
 	public GemStone(int id) {
 		super(id);

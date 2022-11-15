@@ -14,10 +14,6 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.stereotype.Service;
 
 
-/**
- * @author Aidamina
- * @license http://reunion.googlecode.com/svn/trunk/license.txt
- */
 @Service
 public class Reference {
 	

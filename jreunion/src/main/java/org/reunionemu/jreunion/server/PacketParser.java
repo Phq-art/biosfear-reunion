@@ -46,10 +46,7 @@ import org.reunionemu.jreunion.server.Client.State;
 import org.reunionemu.jreunion.server.PacketFactory.Type;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-/**
- * @author Aidamina
- * @license http://reunion.googlecode.com/svn/trunk/license.txt
- */
+
 public class PacketParser extends EventDispatcher implements EventListener{
 
 	private MessageParser messageParser;

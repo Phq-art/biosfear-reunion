@@ -3,10 +3,6 @@ package org.reunionemu.jreunion.game.items.pet;
 import org.reunionemu.jreunion.game.ItemType;
 
 
-/**
- * @author Aidamina
- * @license http://reunion.googlecode.com/svn/trunk/license.txt
- */
 public class PetEgg extends ItemType {
 	public PetEgg(int id) {
 		super(id);

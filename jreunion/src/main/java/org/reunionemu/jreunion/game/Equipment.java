@@ -17,10 +17,6 @@ import org.reunionemu.jreunion.game.items.equipment.Wing;
 import org.reunionemu.jreunion.game.items.pet.PetEgg;
 
 
-/**
- * @author Aidamina
- * @license http://reunion.googlecode.com/svn/trunk/license.txt
- */
 public class Equipment {
 	private Item<?> weapon;
 

@@ -5,11 +5,6 @@ import org.reunionemu.jreunion.game.Player;
 import org.reunionemu.jreunion.server.ItemManager;
 import org.reunionemu.jreunion.server.LocalMap;
 
-
-/**
- * @author Aidamina
- * @license http://reunion.googlecode.com/svn/trunk/license.txt
- */
 public class PetEquipment {
 	
 	private Item<?> body;

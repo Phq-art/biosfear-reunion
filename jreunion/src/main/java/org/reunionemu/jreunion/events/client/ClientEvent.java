@@ -4,10 +4,8 @@ import org.reunionemu.jreunion.events.Event;
 import org.reunionemu.jreunion.events.Filter;
 import org.reunionemu.jreunion.events.InvalidEventException;
 import org.reunionemu.jreunion.server.Client;
-/**
- * @author Aidamina
- * @license http://reunion.googlecode.com/svn/trunk/license.txt
- */
+
+
 public class ClientEvent extends Event {
 	Client client;
 	public ClientEvent(Client client){

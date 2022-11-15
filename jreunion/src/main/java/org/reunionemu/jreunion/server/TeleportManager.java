@@ -7,10 +7,6 @@ import java.util.Vector;
 
 import org.reunionemu.jreunion.game.Player;
 
-/**
- * @author Aidamina
- * @license http://reunion.googlecode.com/svn/trunk/license.txt
- */
 public class TeleportManager {
 	static final float timeout = 30;
 	List<TeleportBucket> teleports = new Vector<TeleportBucket>();

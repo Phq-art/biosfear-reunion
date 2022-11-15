@@ -12,13 +12,11 @@ import java.util.concurrent.ThreadFactory;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-/**
- * @author Aidamina
- * @license http://reunion.googlecode.com/svn/trunk/license.txt
- */
+
+
 public class EventDispatcher{
 	
-	private Object sync = new Object();
+	private final Object sync = new Object();
 
 	private static ExecutorService tpe = Executors.newCachedThreadPool(new ThreadFactory() {
 		
@@ -29,9 +27,7 @@ public class EventDispatcher{
 			return thread;
 		}
 	});
-	static{
-		
-	}
+
 	public <T extends Event> T createEvent(Class<T> eventClass, Object... args){
 		return Event.<T>Create(eventClass, this, args);
 	}
@@ -101,20 +97,16 @@ public class EventDispatcher{
 		}		
 	}
 	
-	
-	
 	private List<Entry<EventListener,Filter>> findEntries(Event event){
 		Map<Class<? extends Event>,Map<EventListener,Filter>> listeners = this.getListeners();
 			
 		List<Entry<EventListener,Filter>> entries = new LinkedList<Entry<EventListener,Filter>>();		
 		synchronized(sync){
-			for(Class<? extends Event> c :listeners.keySet()){
-				if(c.isInstance(event)){
-					for(Entry<EventListener,Filter> entry: listeners.get(c).entrySet()){
-						entries.add(entry);
-					}
+			for(Class<? extends Event> c :listeners.keySet()) {
+				if (c.isInstance(event)) {
+					entries.addAll(listeners.get(c).entrySet());
 				}
-			}		
+			}
 		}
 		return entries;
 	}
@@ -129,7 +121,7 @@ public class EventDispatcher{
 				Filter filter = entry.getValue();
 				if(filter==null || filter.filter(event))
 					listener.handleEvent(event);
-			}catch(Exception e){
+			} catch(Exception e){
 				LoggerFactory.getLogger(this.getClass()).error("Exception",e);
 			}
 		}

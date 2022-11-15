@@ -8,7 +8,6 @@ public class AbsorptionCapsule extends Capsule {
 		super(id);
 	}
 
-
 	@Override
 	public void effect(Player target, int effect) {
 		synchronized(target){

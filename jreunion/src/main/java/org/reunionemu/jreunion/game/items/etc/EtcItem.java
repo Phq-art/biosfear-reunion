@@ -5,10 +5,6 @@ import org.reunionemu.jreunion.game.Player.Race;
 import org.reunionemu.jreunion.game.PlayerItem;
 import org.reunionemu.jreunion.server.Reference;
 
-/**
- * @author Aidamina
- * @license http://reunion.googlecode.com/svn/trunk/license.txt
- */
 public class EtcItem extends PlayerItem {
 	private Race race; // -1 - Common; 0 - Bulkan; 1 - Kailipton; 2 - Aidia;
 

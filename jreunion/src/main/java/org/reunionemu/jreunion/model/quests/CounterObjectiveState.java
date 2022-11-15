@@ -5,10 +5,6 @@ import org.reunionemu.jreunion.model.jpa.ObjectiveStateImpl;
 import org.reunionemu.jreunion.model.quests.objectives.ObjectiveState;
 
 
-/**
- * @author Aidamina
- * @license http://reunion.googlecode.com/svn/trunk/license.txt
- */
 
 public class CounterObjectiveState extends ObjectiveStateImpl implements ObjectiveState {
 	

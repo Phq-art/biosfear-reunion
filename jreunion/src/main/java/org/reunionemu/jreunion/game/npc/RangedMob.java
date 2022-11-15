@@ -1,10 +1,6 @@
 package org.reunionemu.jreunion.game.npc;
 
 
-/**
- * @author Aidamina
- * @license http://reunion.googlecode.com/svn/trunk/license.txt
- */
 public class RangedMob extends Mob {
 	public RangedMob(int type) {
 		super(type);

@@ -6,10 +6,6 @@ import java.util.Vector;
 import org.reunionemu.jreunion.game.Player;
 import org.reunionemu.jreunion.server.Client.State;
 
-/**
- * @author Aidamina
- * @license http://reunion.googlecode.com/svn/trunk/license.txt
- */
 public class PlayerManager {
 	private final java.util.List<Player> playerList = new Vector<Player>();
 

@@ -1,9 +1,5 @@
 package org.reunionemu.jreunion.server;
 
-/**
- * @author Aidamina
- * @license http://reunion.googlecode.com/svn/trunk/license.txt
- */
 public class Crypt {
 	private static Crypt _instance = null;
 

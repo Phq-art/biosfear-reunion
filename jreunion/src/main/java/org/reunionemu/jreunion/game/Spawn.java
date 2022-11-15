@@ -11,10 +11,7 @@ import org.reunionemu.jreunion.server.LocalMap;
 import org.reunionemu.jreunion.server.PacketFactory.Type;
 import org.reunionemu.jreunion.server.Server;
 
-/**
- * @author Aidamina
- * @license http://reunion.googlecode.com/svn/trunk/license.txt
- */
+
 public class Spawn {
 
 

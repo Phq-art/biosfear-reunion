@@ -3,10 +3,6 @@ package org.reunionemu.jreunion.server;
 import org.reunionemu.jcommon.ParsedItem;
 
 
-/**
- * @author Aidamina
- * @license http://reunion.googlecode.com/svn/trunk/license.txt
- */
 public class ServerSetings {
 
 	private long xp;

@@ -6,10 +6,6 @@ import java.util.Vector;
 import org.reunionemu.jreunion.server.Client;
 import org.reunionemu.jreunion.server.Tools;
 
-/**
- * @author Aidamina
- * @license http://reunion.googlecode.com/svn/trunk/license.txt
- */
 public class KailiptonPlayer extends Player {
 
 	public KailiptonPlayer(Client client) {

@@ -19,10 +19,6 @@ import org.reunionemu.jreunion.game.Player;
 import org.reunionemu.jreunion.protocol.OtherProtocol;
 import org.reunionemu.jreunion.protocol.Protocol;
 
-/**
- * @author Aidamina
- * @license http://reunion.googlecode.com/svn/trunk/license.txt
- */
 public class Client extends EventDispatcher implements EventListener, Sendable {
 	
 	public StringBuffer getInputBuffer() {
