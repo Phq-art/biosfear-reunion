@@ -19,27 +19,20 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @Controller
 @RequestMapping("/players")
 public class PlayerController {
-	
 	@Autowired
 	Server server;
 	
 	//@Cacheable(value="default")
 	@RequestMapping(value="{mapId}", method = RequestMethod.GET)
 	public @ResponseBody List<Object> getCount(@PathVariable int mapId) {
-		
 		Map map = server.getWorld().getMap(mapId);
 		if(map!=null && map instanceof LocalMap){
-			
 			List<Object> playersResponse = new LinkedList<Object>();
-			
 			List<Player> players = ((LocalMap) map).getPlayerList();
-			
+
 			for(final Player player: players){
-				
 				playersResponse.add(buildResponse(player));
-				
 			}
-			
 			return playersResponse;
 		}
 		throw new RuntimeException("");
@@ -47,23 +40,17 @@ public class PlayerController {
 	
 	@RequestMapping(method = RequestMethod.GET)
 	public @ResponseBody List<Object> getCountTotal() {
- 
 		Collection<Map> maps = server.getWorld().getMaps();
 		Iterator<Map> iter = maps.iterator();		
 		List<Object> playersResponse = new LinkedList<Object>();
 		while(iter.hasNext()){
 			Map map = iter.next();
-
-			if( map instanceof LocalMap){
+			if(map instanceof LocalMap){
 				List<Player> players = ((LocalMap) map).getPlayerList();
-
 				for(final Player player: players){
-					
 					playersResponse.add(buildResponse(player));
-					
 				}
 			}
-			
 		}
 		return playersResponse;
 	}
@@ -71,7 +58,6 @@ public class PlayerController {
 	@SuppressWarnings("unused")
 	public Object buildResponse(final Player player){
 		return new Object(){
-			
 			public final String name = player.getName();
 			public final int level = player.getLevel();
 			public final Object position = new Object(){

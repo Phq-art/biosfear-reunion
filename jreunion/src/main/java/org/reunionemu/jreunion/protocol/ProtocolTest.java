@@ -8,13 +8,11 @@ import java.util.regex.Matcher;
 public class ProtocolTest {
 
 	public ProtocolTest() throws UnknownHostException {
-		
 		//enc();
 		dec();
 	}
 	
 	public void enc() throws UnknownHostException{
-		
 		String ip = "93.90.190.134";
 		int port = 4005;
 		InetAddress address = InetAddress.getByName(ip);
@@ -56,22 +54,17 @@ public class ProtocolTest {
 			
 			data[i] = (byte)rstep1;
 		}
-		
 		System.out.println(getHex(data));
-		
-		
 		System.out.println(new String(data));
-		
 	}
 
 	public void dec() throws UnknownHostException{
-		
 		String ip = "46.4.196.51";
 		//String ip = "127.0.0.1";
 		int port = 4005;
 		int version  = 2000;
 		byte input = 'l';
-		System.out.println("original: "+Integer.toHexString(input)+" "+input);
+		System.out.println("original: " + Integer.toHexString(input) + " " + input);
 		InetAddress address = InetAddress.getByName(ip);
 		int magic1 = OtherProtocol.magic(address, 0);
 		int magic2 = (port - 17) % 131;
@@ -110,7 +103,6 @@ public class ProtocolTest {
 		
 		System.out.println(packet);
 		System.out.println(getHex(result));
-		
 	}
 	
 	/**
@@ -118,21 +110,12 @@ public class ProtocolTest {
 	 * @throws UnknownHostException 
 	 */
 	public static void main(String[] args) throws UnknownHostException {
-		
-	
-		
 		int r = 62^2000^9999;
 		System.out.println(r);
 		int b = r ^ 9999 ^ 2000;
 		System.out.println(b);
-		
-		//new ProtocolTest(); 
-		
-
+		//new ProtocolTest();
 	}
-	
-	
-	
 	
 	public byte [] encrypt1(String test, String ip, int port) throws UnknownHostException{
 		
@@ -148,39 +131,28 @@ public class ProtocolTest {
 			data[i] = (byte) (magic1 ^ ((data[i] ^ magic2) - 49));
           
 		}
-		
 		return data;
 	}
 	public byte [] encrypt2(String test){
-		
-		
-		
 		return null;
 	}
 	public byte [] encrypt3(String test){
-	
-	
-	
-	return null;
-	}
-	public byte [] encrypt4(String test){
-		
-		
-		
 		return null;
 	}
-	  static final String HEXES = "0123456789abcdef";
-	  public static String getHex( byte [] raw ) {
-	    if ( raw == null ) {
-	      return null;
-	    }
-	    final StringBuilder hex = new StringBuilder( 2 * raw.length );
-	    for ( final byte b : raw ) {
-	      hex.append(HEXES.charAt((b & 0xF0) >> 4))
-	         .append(HEXES.charAt((b & 0x0F)));
-	    }
-	    return hex.toString();
-	  }
-	  
+	public byte [] encrypt4(String test){
+		return null;
+	}
+	static final String HEXES = "0123456789abcdef";
+	public static String getHex( byte [] raw ) {
+	if ( raw == null ) {
+	  return null;
+	}
+	final StringBuilder hex = new StringBuilder( 2 * raw.length );
+	for ( final byte b : raw ) {
+	  hex.append(HEXES.charAt((b & 0xF0) >> 4))
+		 .append(HEXES.charAt((b & 0x0F)));
+	}
+	return hex.toString();
+	}
 
 }

@@ -11,8 +11,8 @@ import org.junit.runner.RunWith;
 import org.reunionemu.jreunion.dao.AccountDao;
 import org.reunionemu.jreunion.model.Account;
 import org.reunionemu.jreunion.model.jpa.AccountImpl;
-import org.springframework.aop.aspectj.annotation.ReflectiveAspectJAdvisorFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
@@ -21,26 +21,27 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 	"classpath*:/spring/**/*-context-test.xml"})
 public class AccountTest {
 
-	@Autowired 
-	AccountDao<Account> accountRespository;
+	@Autowired
+	@Qualifier("accountRepository")
+	AccountDao<Account> accountRepository;
 	
 	@Test
 	public void test() {
-		Assert.assertNotNull(accountRespository);
+		Assert.assertNotNull(accountRepository);
 		Account account = new AccountImpl();
 		account.setUsername("test");
 		account.setEmail("test@example.com");
 		account.setName("John Doe");
 		account.setPassword("1234");
 		
-		accountRespository.save(account);
+		accountRepository.save(account);
 		
-		List<Account> accounts = accountRespository.findByEmail("test@example.com");
+		List<Account> accounts = accountRepository.findByEmail("test@example.com");
 		Assert.assertNotNull(accounts);
 		Assert.assertThat(accounts.size(), greaterThan(0));
 		
-		accountRespository.delete(accounts);
-		accounts = accountRespository.findByEmail("test@example.com");
+		accountRepository.delete(accounts);
+		accounts = accountRepository.findByEmail("test@example.com");
 		Assert.assertThat(accounts.size(), is(0));		
 	}
 

@@ -25,7 +25,7 @@ public class OnlineController {
 	public @ResponseBody int getCount(@PathVariable int mapId) {
 		
 		Map map = server.getWorld().getMap(mapId);
-		if(map!=null && map instanceof LocalMap){
+		if(map instanceof LocalMap){
 			return ((LocalMap) map).getPlayerList().size();
 		}
 		throw new RuntimeException("");

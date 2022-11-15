@@ -15,17 +15,17 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<workspace.basedir>${project.basedir}/../</workspace.basedir>
 	</properties>
-	<repositories>
-		<repository>
-			<id>reunion-maven-repository</id>
-			<name>reunion-maven-repository repository on GitHub</name>
-			<url>http://reuniondev.github.com/reunion-maven-repository/repository/</url>
-		</repository>
-	</repositories>
-	<distributionManagement>
-		<repository>
-			<id>reunion-maven-repository</id>
-			<url>file:///${workspace.basedir}/reunion-maven-repository-pages/repository/</url>
-		</repository>
-	</distributionManagement>
+<!--	<repositories>-->
+<!--		<repository>-->
+<!--			<id>reunion-maven-repository</id>-->
+<!--			<name>reunion-maven-repository repository on GitHub</name>-->
+<!--			<url>http://reuniondev.github.com/reunion-maven-repository/repository/</url>-->
+<!--		</repository>-->
+<!--	</repositories>-->
+<!--	<distributionManagement>-->
+<!--		<repository>-->
+<!--			<id>reunion-maven-repository</id>-->
+<!--			<url>file:///${workspace.basedir}/reunion-maven-repository-pages/repository/</url>-->
+<!--		</repository>-->
+<!--	</distributionManagement>-->
 </project>

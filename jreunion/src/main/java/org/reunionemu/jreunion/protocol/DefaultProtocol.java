@@ -8,7 +8,7 @@ public class DefaultProtocol extends Protocol
 		super(client);
 	}
 
-	public String decryptServer(byte data[]) {
+	public String decryptServer(byte[] data) {
 		for (int i = 0; i < data.length; i++) {
 			data[i] = (byte)(data[i] - 15);
 		}
