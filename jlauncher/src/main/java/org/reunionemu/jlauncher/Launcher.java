@@ -35,10 +35,10 @@ public class Launcher {
 			serverList.Save("SvrList.dta");
 			
 			String dir = ".";
-			dir = "E:\\Games\\BiosFear\\";
+			dir = "C:\\Users\\Duff\\Downloads\\Laghaim Strohhut";
 			
 			String version = launcher.getItem("Launcher").getMemberValue("Version");
-			ProcessBuilder builder = new ProcessBuilder(new String[] { "cmd.exe", "/C", "Game.exe "+version });
+			ProcessBuilder builder = new ProcessBuilder("cmd.exe", "/C", "Game.exe " + version);
 			builder.directory(new File(dir));
 			
 			Process p = builder.start();

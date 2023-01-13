@@ -26,7 +26,7 @@ public class PlayerController {
 	@RequestMapping(value="{mapId}", method = RequestMethod.GET)
 	public @ResponseBody List<Object> getCount(@PathVariable int mapId) {
 		Map map = server.getWorld().getMap(mapId);
-		if(map!=null && map instanceof LocalMap){
+		if(map instanceof LocalMap){
 			List<Object> playersResponse = new LinkedList<Object>();
 			List<Player> players = ((LocalMap) map).getPlayerList();
 
@@ -55,12 +55,11 @@ public class PlayerController {
 		return playersResponse;
 	}
 	
-	@SuppressWarnings("unused")
-	public Object buildResponse(final Player player){
-		return new Object(){
+	public Object buildResponse(final Player player) {
+		return new Object() {
 			public final String name = player.getName();
 			public final int level = player.getLevel();
-			public final Object position = new Object(){
+			public final Object position = new Object() {
 				public final int x = player.getPosition().getX();
 				public final int y = player.getPosition().getY();
 				public final int z = player.getPosition().getZ();
@@ -68,5 +67,4 @@ public class PlayerController {
 			};
 		};
 	}
-
 }

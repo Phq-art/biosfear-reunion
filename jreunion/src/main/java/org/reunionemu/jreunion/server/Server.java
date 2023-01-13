@@ -25,9 +25,7 @@ import org.springframework.stereotype.Service;
 @Lazy(false)
 @Service
 public class Server extends EventDispatcher implements ApplicationContextAware{
-
-	private static Server _instance = null;	
-	
+	private static Server _instance = null;
 	
 	private static ApplicationContext context;
 	
@@ -104,55 +102,38 @@ public class Server extends EventDispatcher implements ApplicationContextAware{
 	 * @throws Throwable
 	 */
 	public static void main(String[] args) throws Exception {
-		
 		context = new ClassPathXmlApplicationContext("classpath*:/META-INF/spring/**/*-context.xml");
-
 		((AbstractApplicationContext) context).registerShutdownHook();
-		
-		
 		//Reference.getInstance().Load();
-		
 		Server server = Server.getInstance();
-
 		try {
-
 			//server.database.start();
-		
-			//server.fireEvent(server.createEvent(ServerStartEvent.class, server));			
-			
-								// modules
-								// Load a module by extending it from
-								// ClassModule
-								// And put the put the parent in the constructor
+			//server.fireEvent(server.createEvent(ServerStartEvent.class, server));
+			// modules
+			// Load a module by extending it from
+			// ClassModule
+			// And put the parent in the constructor
 			
 			System.gc();
 			//server.setState(State.RUNNING);
 			synchronized(server){
 				server.wait();
 			}
-			
 		} catch (Exception e) {
-			
 			logger.error("Exception",e);
-			
 		}
 	}
-
 	@Autowired
 	private Network network;
-
 	private PacketParser packetParser;
-
 	@Autowired
 	private World world;
-
 	@Autowired
 	private Database database;
 
 	private Server() {
 		//Reference.getInstance().Load();
 		//database = new Database();
-
 	}
 
 	/**
@@ -202,5 +183,4 @@ public class Server extends EventDispatcher implements ApplicationContextAware{
 			throws BeansException {
 		Server.context = context;
 	}
-
 }

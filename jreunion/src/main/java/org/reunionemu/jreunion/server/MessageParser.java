@@ -888,9 +888,9 @@ public class MessageParser {
 		} else if (words[0].equals("@mobs_movement") && player.getAdminState() >= 250) {
 			if(words.length == 2){
 				if(words[1].equals("enable") || words[1].equals("1")){
-					Server.getInstance().getWorld().getServerSetings().setMobsMovement(1);
+					Server.getInstance().getWorld().getServerSetings().setMobMovement(1);
 				} else if(words[1].equals("disable") || words[1].equals("0")){
-					Server.getInstance().getWorld().getServerSetings().setMobsMovement(0);
+					Server.getInstance().getWorld().getServerSetings().setMobMovement(0);
 				} else if(words[1].equals("restart") || words[1].equals("2")){
 					player.getPosition().getLocalMap().stopMobsAI();
 					player.getPosition().getLocalMap().startMobsAI(1000);

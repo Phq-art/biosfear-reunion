@@ -63,7 +63,7 @@ public class World extends EventDispatcher implements EventListener, Sendable {
 	
 	private PetManager petManager;
 
-	static public ServerSetings serverSetings;
+	static public ServerSettings serverSetings;
 	
 	@Autowired
 	private Server server;
@@ -75,7 +75,7 @@ public class World extends EventDispatcher implements EventListener, Sendable {
 	
 	@PostConstruct
 	public void init(){
-		serverSetings = new ServerSetings();
+		serverSetings = new ServerSettings();
 		worldCommand = new Command(this);
 		skillManager = new SkillManager();
 		playerManager = new PlayerManager();
@@ -126,7 +126,7 @@ public class World extends EventDispatcher implements EventListener, Sendable {
 	/**
 	 * @return Returns the serverSetings.
 	 */
-	public ServerSetings getServerSetings() {
+	public ServerSettings getServerSetings() {
 		return serverSetings;
 	}
 

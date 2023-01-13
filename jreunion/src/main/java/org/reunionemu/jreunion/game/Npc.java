@@ -2,15 +2,11 @@ package org.reunionemu.jreunion.game;
 
 import java.util.Iterator;
 import java.util.List;
-import java.util.TimerTask;
 import java.util.Vector;
 
-import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.reunionemu.jcommon.ParsedItem;
 import org.reunionemu.jcommon.Parser;
-import org.reunionemu.jreunion.game.Player.Race;
-import org.reunionemu.jreunion.game.items.equipment.*;
 import org.reunionemu.jreunion.game.npc.Mob;
 import org.reunionemu.jreunion.game.npc.NpcShop;
 import org.reunionemu.jreunion.server.Area;
@@ -631,7 +627,7 @@ public class Npc<T extends NpcType> extends LivingObject {
 	public void work() {
 		try {
 			
-			int isMovementEnabled = Server.getInstance().getWorld().getServerSetings().getMobsMovement();
+			int isMovementEnabled = Server.getInstance().getWorld().getServerSetings().getMobMovement();
 		
 			if(isRunning() || getHp() == 0 || isMovementEnabled == 0)
 				return;
